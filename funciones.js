@@ -1,30 +1,9 @@
-// function promedioDePrecio () {
-//     var precioPromedio = (numeroDeNoches * presupuesto) ;
-//     alert ('El precio de tu estadia en  ' + ciudad + ' es de: €' + precioPromedio)
-    
-// }
 
 // function reserva (nombre, destino, duracionReserva, precio) {
 //     this.nombre = nombreDeReserva;
 //     this.destino = ciudad;
 //     this.duracionReserva  = numeroDeNoches;
 //     this.precio = presupuesto;
-// }
-
-// var habitaciones = []
-// const keyLocalStorageProducts = "habitaciones";
-// function buscarDatos () { 
-//     $.get ("./habitaciones.json", function (data) { habitaciones = data} )
-// }
-// buscarDatos ()
-
-// if (localStorage.getItem("habitaciones") == null)
-// localStorage.setItem(keyLocalStorageProducts, JSON.stringify(products));
-
-// function habitacion1Paris () {
-//     $('#habitaciones').append('<span>  <div class="card d-inline-flex p-2" style="width: 18rem;"><div class="card-body"><h5 class="card-title">Hablitacion doble</h5><p class="card-text">Habitacion para maximo dos personas en Paris.</p><select class="seleccion" id="Noches"><option value="" selected disabled hidden>Noches</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select><button onclick="Comprar(${p.productId})" type="button" class="boton">Reservar</button></div></div> </span> ').hide().fadeIn('slow')
-    
-//     // .toggle(4000)         
 // }
 
 const vistaHabitaciones = () => {

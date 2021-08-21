@@ -1,7 +1,3 @@
-// var habitaciones = []
-// function buscarDatos () { 
-//     $.get ("./habitaciones.json", function (data) { habitaciones = data} )
-// }
 var habitaciones = []
 const keyLocalStorageProducts = "habitaciones";
 function buscarDatos () { 
