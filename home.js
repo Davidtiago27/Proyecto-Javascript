@@ -5,6 +5,9 @@ function buscarDatos () {
 }
 buscarDatos ()
 
+localStorage.setItem(keyLocalStorageProducts, JSON.stringify(habitaciones));
+//var Reserva = new Reserva (prompt('Por favor escribe tu nombre'))
+
 $("#destino").change (function () {
     const mostar = $("#destino option:selected").text();
     const numeroNoches = $("#Noches option:selected").val();

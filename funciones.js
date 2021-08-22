@@ -5,7 +5,6 @@
 //     this.duracionReserva  = numeroDeNoches;
 //     this.precio = presupuesto;
 // }
-
 const vistaHabitaciones = () => {
     let vistaProductos = "";
     let productsList = JSON.parse(localStorage.getItem(keyLocalStorageProducts));
@@ -22,7 +21,7 @@ const vistaHabitaciones = () => {
           <li class="list-group-item">Precio: € ${p.precio}</li>
           </ul>
           <div class="card-body">
-          <button "Comprar(${p.productId})" type="button" id=botonReserva class="boton">Reservar</button> 
+          <button "Comprar(${p.habitacionParis})" type="button" id=botonReserva class="boton">Reservar</button> 
           </div>
       </div>`)
     );
