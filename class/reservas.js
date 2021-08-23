@@ -5,10 +5,10 @@ class Reserva {
     }
 
     setHabitacion (pId) {
-        let listaHabitaciones = JSON.parse(localStorage.getItem('habitaciones'));
-        let HabitacionSeleccionada= productsList.find((p) => p.productId === pId);
+        let listaHabitaciones = JSON.parse(localStorage.getItem(keyLocalStorageProducts));
+        let HabitacionSeleccionada= listaHabitaciones.find((p) => p.habitacionParis === pId);
 
-        let nuevahabitacionReservada = new habitacionReservada()
+        let nuevahabitacionReservada = new habitacionReservada(HabitacionSeleccionada.habitacionParis, 1)
     }
 
 

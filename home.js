@@ -1,11 +1,18 @@
-var habitaciones = []
-const keyLocalStorageProducts = "habitaciones";
 function buscarDatos () { 
     $.get ("./habitaciones.json", function (data) { habitaciones = data} )
 }
 buscarDatos ()
 
-localStorage.setItem(keyLocalStorageProducts, JSON.stringify(habitaciones));
+var habitaciones = []
+const keyLocalStorageProducts = "habitaciones";
+if (localStorage.getItem("habitaciones") == null)
+    localStorage.setItem(keyLocalStorageProducts, JSON.stringify(habitaciones));
+
+var ReservaUsuario = new Reserva("marta");
+
+
+
+
 //var Reserva = new Reserva (prompt('Por favor escribe tu nombre'))
 
 $("#destino").change (function () {
