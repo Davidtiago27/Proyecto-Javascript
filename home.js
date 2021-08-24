@@ -1,19 +1,25 @@
-function buscarDatos () { 
-    $.get ("./habitaciones.json", function (data) { habitaciones = data} )
-}
-buscarDatos ()
-
 var habitaciones = []
+
 const keyLocalStorageProducts = "habitaciones";
-if (localStorage.getItem("habitaciones") == null)
+
+$.get ("./habitaciones.json", function (data) { 
+    
+    habitaciones = data
+    // if (localStorage.getItem("habitaciones") == null)
     localStorage.setItem(keyLocalStorageProducts, JSON.stringify(habitaciones));
+} )
+ // localStorage.setItem('habitaciones',JSON.stringify(habitaciones))
 
-var ReservaUsuario = new Reserva("marta");
+var nombreDelUsuario = prompt('Por favor escribe tu nombre')
 
+var ReservaUsuario = new Reserva(nombreDelUsuario);
 
+// localStorage.setItem('habitaciones',JSON.stringify(habitaciones))
 
+// const keyLocalStorageProducts = "habitaciones";
+// if (localStorage.getItem("habitaciones") == null)
+//     localStorage.setItem(keyLocalStorageProducts, JSON.stringify(habitaciones));
 
-//var Reserva = new Reserva (prompt('Por favor escribe tu nombre'))
 
 $("#destino").change (function () {
     const mostar = $("#destino option:selected").text();
@@ -31,17 +37,6 @@ $("#destino").change (function () {
 
 )
 
-
-const reservarHabitacion = $("#botonReserva").click(function () { 
-    console.log(this);
-});
-
-
-
-// var reserva1Texto = JSON.stringify(reserva1)
-// var reserva1Parse = JSON.parse(reserva1Texto)
-
-// localStorage.setItem(reserva1Texto)
 
 
 // alert (

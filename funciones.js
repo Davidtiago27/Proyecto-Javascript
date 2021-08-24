@@ -1,15 +1,9 @@
 
-// function reserva (nombre, destino, duracionReserva, precio) {
-//     this.nombre = nombreDeReserva;
-//     this.destino = ciudad;
-//     this.duracionReserva  = numeroDeNoches;
-//     this.precio = presupuesto;
-// }
 const vistaHabitaciones = () => {
     let vistaProductos = "";
-    let productsList = JSON.parse(localStorage.getItem(keyLocalStorageProducts));
-  
-    habitaciones.forEach(
+    // let habitacionesLista = JSON.parse(localStorage.getItem(keyLocalStorageProducts));
+    let habitacionesLista = JSON.parse(localStorage.getItem(keyLocalStorageProducts))
+    habitacionesLista.forEach(
       (p) =>
         (vistaProductos += `
       <div id='${p.habitacionParis}' class="card d-inline-flex p-2" style="width: 18rem;">
@@ -21,7 +15,7 @@ const vistaHabitaciones = () => {
           <li class="list-group-item">Precio: € ${p.precio}</li>
           </ul>
           <div class="card-body">
-          <button "Reservar(${p.habitacionParis})" type="button" id=botonReserva class="boton">Reservar</button> 
+          <button onclick="ReservaUsuario.setHabitacion(${p.habitacionParis})" type="button" id=botonReserva class="boton">Reservar</button> 
           </div>
       </div>`)
     );
