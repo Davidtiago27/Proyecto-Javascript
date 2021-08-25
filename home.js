@@ -5,7 +5,7 @@ const keyLocalStorageProducts = "habitaciones";
 $.get ("./habitaciones.json", function (data) { 
     
     habitaciones = data
-    // if (localStorage.getItem("habitaciones") == null)
+    //if (localStorage.getItem("habitaciones") == null)
     localStorage.setItem(keyLocalStorageProducts, JSON.stringify(habitaciones));
 } )
  // localStorage.setItem('habitaciones',JSON.stringify(habitaciones))
